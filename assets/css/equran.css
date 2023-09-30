@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap");
+:root {
+  /* shadow */
+  --box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9), 5px 5px 8px rgba(0, 0, 0, 0.07);
+  --box-shadow-outside: -6px -6px 14px rgba(255, 255, 255, .7),
+                          -6px -6px 10px rgba(255, 255, 255, .5),
+                          6px 6px 8px rgba(255, 255, 255, .075),
+                          6px 6px 10px rgba(0, 0, 0, .15);
+  --box-shadow-outside-hover: -2px -2px 6px rgba(255, 255, 255, .6),
+                          -2px -2px 4px rgba(255, 255, 255, .4),
+                          2px 2px 2px rgba(255, 255, 255, .05),
+                          2px 2px 4px rgba(0, 0, 0, .1);
+  --box-shadow-inside: inset -2px -2px 6px rgba(255, 255, 255, .7),
+                          inset -2px -2px 4px rgba(255, 255, 255, .5),
+                          inset 2px 2px 2px rgba(255, 255, 255, .075),
+                          inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+
+a {
+  text-decoration: none;
+  box-shadow: var(--box-shadow-outside);
+}
+
+a:hover {
+  box-shadow: var(--box-shadow-outside-hover);
+}
+
+a:active {
+  box-shadow: var(--box-shadow-inside);
+}
+
+form {
+  box-shadow: var(--box-shadow-inside);
+  background-color: #f6f6f6;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+input:focus {
+  outline: 1px solid #999;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search] {
+  border: 0;
+  width: 100%;
+  min-height: 1.5rem;
+  border-radius: 18px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  box-shadow: var(--box-shadow-inside);
+}
+
+label {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  display: block;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  width: 60%;
+  display: inline !important;
+  background-color: #f6f6f6;
+  box-shadow: var(--box-shadow-outside);
+  min-height: 100vh;
+  z-index: 9999;
+  animation: openFromRight 0.5s ease 0s 1 normal forwards;
+}
+.menu a {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  color: #444;
+}
+.menu p {
+  margin: 0;
+  display: inline !important;
+  text-align: right !important;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--box-shadow-outside);
+  border-radius: 50%;
+  margin-bottom: 2rem !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+}
+.menu p:hover {
+  box-shadow: var(--box-shadow-outside-hover);
+}
+.menu p:active {
+  box-shadow: var(--box-shadow-inside);
+}
+
+.menu-close {
+  animation: closeToRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes openFromRight {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
+@keyframes closeToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@font-face {
+  font-family: arab;
+  src: url("../fonts/LPMQ.ttf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background-color: #f6f6f6;
+  color: #444;
+  font-family: Poppins;
+}
+body nav {
+  color: #444;
+  padding: 1rem 3rem;
+  box-shadow: var(--box-shadow-outside-hover);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body nav .brand {
+  margin: auto 0;
+}
+body nav .brand a {
+  padding: 0.5rem 1rem;
+  box-shadow: var(--box-shadow-outside);
+  border-radius: 12px;
+  font-weight: 700;
+  color: #444;
+}
+body nav .nav-btn {
+  margin: auto 0;
+}
+body nav .nav-btn a {
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+body nav .nav-link {
+  display: none;
+}
+body .content {
+  padding: 1rem 0.5rem;
+}
+body .content .search-box {
+  width: 50%;
+  margin: 0 auto;
+}
+body .content .content-box {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .content .content-box .card {
+  font-weight: 500;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: var(--box-shadow-outside);
+}
+body .content .content-box .surat {
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-inside);
+  width: 100%;
+}
+body .content .content-box .surat h1,
+body .content .content-box .surat p {
+  text-align: center;
+  margin: 0;
+}
+body .content .content-box .surat p {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+body .content .content-box .surat span {
+  font-family: arab;
+}
+body .content .content-box .surat .ayat {
+  box-shadow: var(--box-shadow-inside);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+body .content .content-box .surat .ayat h6 {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+body .content .content-box .surat .ayat .arti {
+  text-align: justify;
+}
+body .content .content-box .surat .ayat p {
+  font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  .menu {
+    width: 30%;
+  }
+}
+.arab {
+  font-family: arab;
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  padding: 0 1rem;
+}
+
+.keterangan {
+  text-align: center;
+}
+
+.latin {
+  padding: 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .list-surat {
+    padding: 1rem;
+    display: grid !important;
+    grid-template-columns: 43.5% 43.5%;
+    column-gap: 3rem !important;
+  }
+  .list-surat .card {
+    width: 100%;
+    background-color: var(--bg);
+  }
+  .loader {
+    position: absolute;
+    top: 43% !important;
+    left: 43% !important;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #444; /* Blue */
+    border-radius: 50%;
+    width: 100px !important;
+    height: 100px !important;
+    animation: spin 1s linear infinite;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: #f6f6f6;
+    color: #444;
+  }
+  body nav {
+    color: #444;
+    padding: 2rem 3rem;
+    box-shadow: var(--box-shadow-outside-hover);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  body nav .brand {
+    margin: auto 0;
+  }
+  body nav .brand a {
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow-outside);
+    border-radius: 12px;
+    font-weight: 700;
+    color: #444;
+    font-size: 1.5rem;
+  }
+  body nav .nav-btn {
+    margin: auto 0;
+  }
+  body nav .nav-btn a {
+    padding: 0.75rem;
+    border-radius: 50%;
+  }
+  body nav .nav-link {
+    display: none;
+  }
+  body .content {
+    padding: 1rem 0.5rem;
+  }
+  body .content .search-box {
+    width: 50%;
+    margin: 0 auto;
+  }
+  body .content .content-box {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .content .content-box .card {
+    font-weight: 500;
+    margin: 1rem;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: var(--box-shadow-outside);
+  }
+  body .content .content-box .card .latin p {
+    font-size: 1.7rem;
+  }
+  body .content .content-box .card .arab p {
+    font-size: 2.5rem;
+    font-family: arab;
+  }
+  body .content .content-box .card .keterangan p {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  body .content .content-box .surat {
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-inside);
+    width: 100%;
+  }
+  body .content .content-box .surat h1,
+  body .content .content-box .surat p {
+    text-align: center;
+    margin: 0;
+  }
+  body .content .content-box .surat p {
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  body .content .content-box .surat .ayat {
+    box-shadow: var(--box-shadow-inside);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  body .content .content-box .surat .ayat h6 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: right;
+    font-weight: 500;
+    line-height: 4.5rem;
+    font-family: arab;
+  }
+  body .content .content-box .surat .ayat .arti {
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+  body .content .content-box .surat .ayat p {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 900px) {
+  .list-surat {
+    padding: 1rem;
+    display: grid !important;
+    grid-template-columns: 21.5% 21.5% 21.5% 21.5%;
+    column-gap: 3rem !important;
+  }
+  .list-surat .card {
+    width: 100%;
+    background-color: var(--bg);
+  }
+  .loader {
+    position: absolute;
+    top: 43% !important;
+    left: 43% !important;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #444; /* Blue */
+    border-radius: 50%;
+    width: 100px !important;
+    height: 100px !important;
+    animation: spin 1s linear infinite;
+  }
+  .keterangan p {
+    font-size: 1rem !important;
+    font-weight: 200;
+  }
+}
+.loader-box {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 999999999;
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #444; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.none {
+  display: none;
+}/*# sourceMappingURL=equran.css.map */

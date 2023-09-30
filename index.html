@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/equran.css">
+</head>
+<body>
+    <!-- nav start -->
+    <nav>
+        <div class="brand"><p>Neumorphism</p></div>
+        <div class="nav-btn" onclick="showMenu()"><a >&#9776;</a></div>
+        <div class="nav-link">
+            <p onclick="closeMenu()">x</p>
+            <a href="#">Home</a>
+            <a href="#">Price</a>
+            <a href="#">Service</a>
+            <a href="#">Product</a>
+            <a href="#">About</a>
+        </div>
+        
+    </nav>
+    <!-- nav end -->
+
+    <!-- hero start -->
+    <div class="hero">
+        <div class="hero-start">
+            <h3>Sing Up</h3>
+            <form action="">
+                <div class="input-groub">
+                    <label for="">User Name</label>
+                    <input type="text" placeholder="User Name">
+                </div>
+                <div class="input-groub">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="input-groub-checkbox">
+                    <label for="checkPassword" ><input type="checkbox" class="input-checkbox" id="checkPassword"> Show Password</label>
+                </div>
+            </form>
+        </div>
+        <div class="hero-end">
+            <img src="https://demo.themesberg.com/neumorphism-ui/assets/img/illustrations/reading-side.svg" alt="">
+        </div>
+    </div>
+    <!-- hero end -->
+
+    <!-- card start -->
+    <div class="card"></div>
+    <!-- card end -->
+
+    <!-- carousels start -->
+    <!-- <div class="carousels"></div> -->
+    <!-- carousels end -->
+    
+    <script>
+        let menu = false
+        const navLink = document.querySelector('.nav-link')
+        function showMenu() {
+            navLink.classList.add('menu')
+        }
+        function closeMenu() {
+            navLink.classList.add('menu-close')
+            setTimeout(function(){
+            navLink.classList.remove('menu')
+            navLink.classList.remove('menu-close')
+        },1000);
+        }
+    </script>
+</body>
+</html>
