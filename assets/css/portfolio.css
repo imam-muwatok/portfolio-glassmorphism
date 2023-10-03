@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap");
+:root {
+  /* shadow */
+  --box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9), 5px 5px 8px rgba(0, 0, 0, 0.07);
+  --box-shadow-outside: -6px -6px 14px rgba(255, 255, 255, .7),
+                          -6px -6px 10px rgba(255, 255, 255, .5),
+                          6px 6px 8px rgba(255, 255, 255, .075),
+                          6px 6px 10px rgba(0, 0, 0, .15);
+  --box-shadow-outside-hover: -2px -2px 6px rgba(255, 255, 255, .6),
+                          -2px -2px 4px rgba(255, 255, 255, .4),
+                          2px 2px 2px rgba(255, 255, 255, .05),
+                          2px 2px 4px rgba(0, 0, 0, .1);
+  --box-shadow-inside: inset -2px -2px 6px rgba(255, 255, 255, .7),
+                          inset -2px -2px 4px rgba(255, 255, 255, .5),
+                          inset 2px 2px 2px rgba(255, 255, 255, .075),
+                          inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.none {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(68, 68, 68, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: 0;
+  font-family: Poppins;
+  color: #FFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+body .loader {
+  position: relative;
+  min-height: 100vh;
+}
+body .loader .loader-item {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+body .loader .loader-item p {
+  font-size: 2rem;
+  font-weight: 700;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+body .app nav {
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .app nav .brand {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+body .app nav .brand p {
+  margin: auto;
+  font-weight: 700;
+  font-size: 24px;
+}
+body .app nav .nav-btn p {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  padding: 1rem;
+}
+body .app nav .nav-btn p span {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+body .app nav .nav-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  min-height: 100vh;
+  padding: 1rem;
+}
+body .app nav .nav-link .brand-link {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .app nav .nav-link .brand-link p {
+  padding: 0 1rem;
+  margin: auto;
+  font-weight: 700;
+}
+body .app nav .nav-link .brand-link p:nth-child(2) {
+  position: relative;
+}
+body .app nav .nav-link .nav-item {
+  margin-top: 1rem;
+}
+body .app nav .nav-link .nav-item a {
+  display: block;
+  text-align: center;
+  color: #FFF;
+}
+body .app nav .nav-link::before {
+  width: auto;
+  min-height: 100vh;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  filter: blur(7.1px);
+}
+body .app .hero {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+body .app .hero .card {
+  padding: 1rem;
+}
+body .app .hero .card h3, body .app .hero .card p {
+  margin: 0;
+}
+body .app .hero .card h3 {
+  margin-bottom: 1rem;
+}
+body .app .hero .card p span {
+  font-weight: 700;
+}
+body .app .hero .card a {
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+body .app .hero .card a:hover {
+  opacity: 0.7;
+}
+body .app .hero .card a:active {
+  opacity: 1;
+}
+body .app .slider {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+body .app .slider .card {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+body .app .slider .card .slider-items {
+  --slide-width: clamp(320px, 75vw, 800px);
+  --slide-height: clamp(240px, 75vh, 600px);
+  display: grid;
+  grid-auto-flow: column;
+  scroll-snap-type: x mandatory;
+  max-width: var(--slide-width);
+  border: 5px solid #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.25);
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body .app .slider .card .slider-items::-webkit-scrollbar {
+  display: none;
+}
+body .app .slider .card .slider-items .slide {
+  scroll-snap-align: start;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .app .slider .card .slider-items .dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 15px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .app .slider .card .slider-items .dots a {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  cursor: pointer;
+}
+body .app .slider .card .slider-items .dots a:hover {
+  opacity: 1;
+}
+body .app .slider::after {
+  position: absolute;
+  z-index: 12;
+  color: rgba(255, 255, 255, 0);
+  left: 300px;
+  top: 80px;
+  -webkit-transition: 1s all ease-in-out;
+  -moz-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+body .app .project {
+  padding: 1rem;
+}
+body .app .project .card {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+body .app .project .card .card-image {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .app .project .card .card-image span {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+body .app .project .card .card-image span p {
+  color: #FFF;
+  margin: auto;
+  opacity: 0;
+}
+body .app .project .card .card-image:hover p {
+  opacity: 1;
+}
+body .app .project .card .card-image:hover span {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+body .app .project .card .card-body {
+  padding: 1rem;
+}
+body .app .project .card .card-body h3 {
+  overflow: hidden;
+  text-align: left;
+  width: 280px;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+  text-overflow: ellipsis;
+}
+body .app .client {
+  padding: 1rem;
+}
+body .app .client .card {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+body .app .client .card img {
+  width: 60px;
+  filter: grayscale(1);
+  margin: 0 0.5rem;
+}
+body .app .client .card img:hover {
+  filter: grayscale(0);
+}
+body .app footer {
+  padding: 3 1rem;
+}
+body .app footer .social a {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+body .app footer p {
+  text-align: center;
+}
+body .app footer p a {
+  color: #FFF;
+}
+
+.title-section {
+  text-align: center;
+  font-size: 2rem;
+}
+
+html::before {
+  position: fixed;
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  filter: blur(7.1px);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@media (min-width: 599px) {
+  .app .project {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .app .project h2 {
+    display: inline-block;
+    text-align: center;
+  }
+  .app .project .card {
+    width: 40%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  .app .project .card .card-image {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .app .project .card .card-image span {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .app .project .card .card-image span p {
+    color: #FFF;
+    margin: auto;
+    opacity: 0;
+  }
+  .app .project .card .card-image:hover p {
+    opacity: 1;
+  }
+  .app .project .card .card-image:hover span {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .app .project .card .card-body {
+    padding: 1rem;
+  }
+  .app .project .card .card-body h3 {
+    overflow: hidden;
+    text-align: left;
+    width: 280px;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width: 900px) {
+  .app .project {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .app .project h2 {
+    display: inline-block;
+    text-align: center;
+  }
+  .app .project .card {
+    width: 25%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  .app .project .card .card-image {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .app .project .card .card-image span {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .app .project .card .card-image span p {
+    color: #FFF;
+    margin: auto;
+    opacity: 0;
+  }
+  .app .project .card .card-image:hover p {
+    opacity: 1;
+  }
+  .app .project .card .card-image:hover span {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .app .project .card .card-body {
+    padding: 1rem;
+  }
+  .app .project .card .card-body h3 {
+    overflow: hidden;
+    text-align: left;
+    width: 280px;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0;
+    text-overflow: ellipsis;
+  }
+  .app .client .card img {
+    width: 60px;
+  }
+}/*# sourceMappingURL=portfolio.css.map */

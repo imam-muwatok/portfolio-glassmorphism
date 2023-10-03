@@ -4,70 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/equran.css">
+    <link rel="stylesheet" href="./assets/css/portfolio.css">
+    <!-- fontsawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
-    <!-- nav start -->
-    <nav>
-        <div class="brand"><p>Neumorphism</p></div>
-        <div class="nav-btn" onclick="showMenu()"><a >&#9776;</a></div>
-        <div class="nav-link">
-            <p onclick="closeMenu()">x</p>
-            <a href="#">Home</a>
-            <a href="#">Price</a>
-            <a href="#">Service</a>
-            <a href="#">Product</a>
-            <a href="#">About</a>
+    <!-- <div class="loader none">
+        <div class="loader-item">
+            <p class="typing">loading. . .</p>
         </div>
-        
-    </nav>
-    <!-- nav end -->
+    </div> -->
+    <div class="app">
+        <nav class="nav">
+            <div class="brand">
+                <p href="">Muwatok Dev</p>
+            </div>
+            <div class="nav-btn"><p onclick="showMenu()"><span>&#9776;</span></p></div>
+            <div class="nav-link">
+                <div class="brand-link">
+                    <p href="">Muwatok Dev</p>
+                    <p onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></p>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                </div>
 
-    <!-- hero start -->
-    <div class="hero">
-        <div class="hero-start">
-            <h3>Sing Up</h3>
-            <form action="">
-                <div class="input-groub">
-                    <label for="">User Name</label>
-                    <input type="text" placeholder="User Name">
-                </div>
-                <div class="input-groub">
-                    <label for="">Password</label>
-                    <input type="password" placeholder="Password">
-                </div>
-                <div class="input-groub-checkbox">
-                    <label for="checkPassword" ><input type="checkbox" class="input-checkbox" id="checkPassword"> Show Password</label>
-                </div>
-            </form>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="card">
+                <h3>Hai, Nama Saya adalah <span>Muhammad imam Muwatok</span></h3>
+                <p>saya adalah seorang Web Developer. Saya membuat website menggunakan bahasa PHP sebagai Back End dan menggunakan html, css, dan JavaScript sebagai Front End. Saya biasa menggunakan Bootstrap Sebagai framework css dan melakukan sedikit Costumize, Akan tetapi saya juga bisa menggunakan Tailwindcss untuk Framework css. Untuk Back End biasa menggunakan Codeigniter 3 dan Laravel. Jika anda ingin mengembangkan bisnis anda menggunakan layanan aplikasi berbasis Website silahkan hubungi melalui kontak yng sudah di sediakan. Terima Kasih sudah berkunjung.</p>
+                <a href="https://wa.me/628995559594" target="_blank">Hire Me</a>
+            </div>
         </div>
-        <div class="hero-end">
-            <img src="https://demo.themesberg.com/neumorphism-ui/assets/img/illustrations/reading-side.svg" alt="">
+        <h2 class="title-section">Project</h2>
+        <div class="project">
+            <div class="card">
+                <a href="https://imam-muwatok.github.io/Al-Quran-Neumorphism/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/alquran.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>Al-Quran-Neumorphism</h3>
+                    <p>Aplikasi Al-Quran ini adalah aplikasi yang di bangun hanya dengan HTML, CSS, dan javascript yang menggunkan tema Neumorphism. CSS ditulis dengan SASS, dan data menggunakan fetch file JSON, sedangkan untuk manipulator DOM menggunkan native javaScript.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://imam-muwatok.github.io/joobs/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/joobs.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>Joobs</h3>
+                    <p>Ini adalah Front-end hasil Slicing dari figma yang di design oleh <a href="https://www.figma.com/community/file/1110869744143331941/job-search" target="_blank">Hazar Hamzah</a>.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://sapu-lidi.github.io/J-Player/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/md-player.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>MD-Player</h3>
+                    <p>MD-Player merupakan aplikasi streaming music sederhana.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://imam-muwatok.github.io/jadwal-sholat-with-adzan-dan-alert/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/aplikasiut.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>Daftar Aplikasi ut</h3>
+                    <p>Daftar aplikasi UT adalah halaman web yang mengumpulkan beberapa aplikasi dari ut untuk mempermudah jika lupa aplikasi-aplikasi ut yang terbilang lumayan banyak.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://imam-muwatok.github.io/jadwal-sholat-with-adzan-dan-alert/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/jadwalsholat.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>Jadwal Sholat</h3>
+                    <p>Jadwal sholat adalah aplikasi yang menampilkan jadwal sholat yang otomatis akan adzan jika waktu sudah masuk waktu sholat wajib, akan memutar tahrim jika imsak, dam memutar alert jika waktu fajar.</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://imam-muwatok.github.io/jadwal-sholat-with-adzan-dan-alert/">
+                    <div class="card-image" style="background-image: url('./assets/img/projects/smpn3getasan.png');">
+                        <span><p>Click to visiting website</p></span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h3>System Assessment SMP N 3 Getasan</h3>
+                    <p>Fullstack pembuatan aplikasi penilaian dan juga tempat upload video ujian praktek pesertadidik masa pandemi 2021.</p>
+                </div>
+            </div>
         </div>
+
+        <div class="title-section">Client</div>
+
+        <div class="client">
+            <div class="card">
+                <img src="./assets/img/clients/smp3getasan.png" alt="SMP N 3 Getasan">
+            </div>
+        </div>
+
+        <footer>
+            <hr>
+            <p class="social">
+                <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             
+            </p>
+            <hr>
+            <p>@ 2023 <a href="https://imam-muwatok.github.io/portfolio/" target="_blank">Muwatok Dev</a></p>
+        </footer>
+
+        <!-- <div class="slider">
+            <div class="card">
+                <div class="slider-items">
+                    <img id="slide-1" class="slide" src="https://picsum.photos/301/300" alt="">
+                    <img id="slide-2" class="slide" src="https://picsum.photos/302/300" alt="">
+                    <img id="slide-3" class="slide" src="https://picsum.photos/303/300" alt="">
+                    <div class="dots">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
-    <!-- hero end -->
 
-    <!-- card start -->
-    <div class="card"></div>
-    <!-- card end -->
-
-    <!-- carousels start -->
-    <!-- <div class="carousels"></div> -->
-    <!-- carousels end -->
     
     <script>
         let menu = false
+        const loader = document.querySelector('.loader')
+        const app = document.querySelector('.app')
         const navLink = document.querySelector('.nav-link')
         function showMenu() {
-            navLink.classList.add('menu')
+            navLink.classList.remove('none')
         }
         function closeMenu() {
-            navLink.classList.add('menu-close')
-            setTimeout(function(){
-            navLink.classList.remove('menu')
-            navLink.classList.remove('menu-close')
-        },1000);
+            navLink.classList.add('none')
         }
+
+        // navLink.classList.add('none')
+        
+        // evnetlistener
+        window.addEventListener("load", (event) => {
+            // app.classList.add('none')
+            // loader.classList.remove('none')
+            navLink.classList.add('none')
+            // setTimeout(() => {
+            //     loader.classList.add('none')
+            //     app.classList.remove('none')
+            // }, 2500)
+        });
+
+
     </script>
 </body>
 </html>
